@@ -41,16 +41,56 @@
    <h3>Object Properties</h3>
    <table>
       <grid:foreachGovernmentHasRelatedIterator>
-         <tr><td>hasRelated</td><td><a href="../<grid:GovernmentHasRelatedType/>/<grid:GovernmentHasRelatedType/>.jsp?uri=<grid:GovernmentHasRelated/>"><grid:GovernmentHasRelated /></a></td></tr>
+         <tr><td>hasRelated</td><td>
+            <c:set var="localType"><grid:GovernmentHasRelatedType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:GovernmentHasRelated/>"><grid:GovernmentHasRelated/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:GovernmentHasRelatedType/>/<grid:GovernmentHasRelatedType/>.jsp?uri=<grid:GovernmentHasRelated/>"><grid:GovernmentHasRelated /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachGovernmentHasRelatedIterator>
       <grid:foreachGovernmentHasAddressIterator>
-         <tr><td>hasAddress</td><td><a href="../<grid:GovernmentHasAddressType/>/<grid:GovernmentHasAddressType/>.jsp?uri=<grid:GovernmentHasAddress/>"><grid:GovernmentHasAddress /></a></td></tr>
+         <tr><td>hasAddress</td><td>
+            <c:set var="localType"><grid:GovernmentHasAddressType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:GovernmentHasAddress/>"><grid:GovernmentHasAddress/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:GovernmentHasAddressType/>/<grid:GovernmentHasAddressType/>.jsp?uri=<grid:GovernmentHasAddress/>"><grid:GovernmentHasAddress /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachGovernmentHasAddressIterator>
       <grid:foreachGovernmentHasChildIterator>
-         <tr><td>hasChild</td><td><a href="../<grid:GovernmentHasChildType/>/<grid:GovernmentHasChildType/>.jsp?uri=<grid:GovernmentHasChild/>"><grid:GovernmentHasChild /></a></td></tr>
+         <tr><td>hasChild</td><td>
+            <c:set var="localType"><grid:GovernmentHasChildType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:GovernmentHasChild/>"><grid:GovernmentHasChild/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:GovernmentHasChildType/>/<grid:GovernmentHasChildType/>.jsp?uri=<grid:GovernmentHasChild/>"><grid:GovernmentHasChild /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachGovernmentHasChildIterator>
       <grid:foreachGovernmentHasParentIterator>
-         <tr><td>hasParent</td><td><a href="../<grid:GovernmentHasParentType/>/<grid:GovernmentHasParentType/>.jsp?uri=<grid:GovernmentHasParent/>"><grid:GovernmentHasParent /></a></td></tr>
+         <tr><td>hasParent</td><td>
+            <c:set var="localType"><grid:GovernmentHasParentType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:GovernmentHasParent/>"><grid:GovernmentHasParent/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:GovernmentHasParentType/>/<grid:GovernmentHasParentType/>.jsp?uri=<grid:GovernmentHasParent/>"><grid:GovernmentHasParent /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachGovernmentHasParentIterator>
    </table>
 

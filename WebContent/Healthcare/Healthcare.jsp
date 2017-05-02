@@ -41,16 +41,56 @@
    <h3>Object Properties</h3>
    <table>
       <grid:foreachHealthcareHasRelatedIterator>
-         <tr><td>hasRelated</td><td><a href="../<grid:HealthcareHasRelatedType/>/<grid:HealthcareHasRelatedType/>.jsp?uri=<grid:HealthcareHasRelated/>"><grid:HealthcareHasRelated /></a></td></tr>
+         <tr><td>hasRelated</td><td>
+            <c:set var="localType"><grid:HealthcareHasRelatedType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:HealthcareHasRelated/>"><grid:HealthcareHasRelated/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:HealthcareHasRelatedType/>/<grid:HealthcareHasRelatedType/>.jsp?uri=<grid:HealthcareHasRelated/>"><grid:HealthcareHasRelated /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachHealthcareHasRelatedIterator>
       <grid:foreachHealthcareHasAddressIterator>
-         <tr><td>hasAddress</td><td><a href="../<grid:HealthcareHasAddressType/>/<grid:HealthcareHasAddressType/>.jsp?uri=<grid:HealthcareHasAddress/>"><grid:HealthcareHasAddress /></a></td></tr>
+         <tr><td>hasAddress</td><td>
+            <c:set var="localType"><grid:HealthcareHasAddressType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:HealthcareHasAddress/>"><grid:HealthcareHasAddress/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:HealthcareHasAddressType/>/<grid:HealthcareHasAddressType/>.jsp?uri=<grid:HealthcareHasAddress/>"><grid:HealthcareHasAddress /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachHealthcareHasAddressIterator>
       <grid:foreachHealthcareHasChildIterator>
-         <tr><td>hasChild</td><td><a href="../<grid:HealthcareHasChildType/>/<grid:HealthcareHasChildType/>.jsp?uri=<grid:HealthcareHasChild/>"><grid:HealthcareHasChild /></a></td></tr>
+         <tr><td>hasChild</td><td>
+            <c:set var="localType"><grid:HealthcareHasChildType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:HealthcareHasChild/>"><grid:HealthcareHasChild/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:HealthcareHasChildType/>/<grid:HealthcareHasChildType/>.jsp?uri=<grid:HealthcareHasChild/>"><grid:HealthcareHasChild /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachHealthcareHasChildIterator>
       <grid:foreachHealthcareHasParentIterator>
-         <tr><td>hasParent</td><td><a href="../<grid:HealthcareHasParentType/>/<grid:HealthcareHasParentType/>.jsp?uri=<grid:HealthcareHasParent/>"><grid:HealthcareHasParent /></a></td></tr>
+         <tr><td>hasParent</td><td>
+            <c:set var="localType"><grid:HealthcareHasParentType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:HealthcareHasParent/>"><grid:HealthcareHasParent/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:HealthcareHasParentType/>/<grid:HealthcareHasParentType/>.jsp?uri=<grid:HealthcareHasParent/>"><grid:HealthcareHasParent /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachHealthcareHasParentIterator>
    </table>
 

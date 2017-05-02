@@ -41,7 +41,17 @@
    <h3>Object Properties</h3>
    <table>
       <grid:foreachAddressHasGeonamesCityIterator>
-         <tr><td>hasGeonamesCity</td><td><a href="../<grid:AddressHasGeonamesCityType/>/<grid:AddressHasGeonamesCityType/>.jsp?uri=<grid:AddressHasGeonamesCity/>"><grid:AddressHasGeonamesCity /></a></td></tr>
+         <tr><td>hasGeonamesCity</td><td>
+            <c:set var="localType"><grid:AddressHasGeonamesCityType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:AddressHasGeonamesCity/>"><grid:AddressHasGeonamesCity/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:AddressHasGeonamesCityType/>/<grid:AddressHasGeonamesCityType/>.jsp?uri=<grid:AddressHasGeonamesCity/>"><grid:AddressHasGeonamesCity /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachAddressHasGeonamesCityIterator>
    </table>
 

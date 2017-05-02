@@ -41,16 +41,56 @@
    <h3>Object Properties</h3>
    <table>
       <grid:foreachEducationHasRelatedIterator>
-         <tr><td>hasRelated</td><td><a href="../<grid:EducationHasRelatedType/>/<grid:EducationHasRelatedType/>.jsp?uri=<grid:EducationHasRelated/>"><grid:EducationHasRelated /></a></td></tr>
+         <tr><td>hasRelated</td><td>
+            <c:set var="localType"><grid:EducationHasRelatedType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:EducationHasRelated/>"><grid:EducationHasRelated/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:EducationHasRelatedType/>/<grid:EducationHasRelatedType/>.jsp?uri=<grid:EducationHasRelated/>"><grid:EducationHasRelated /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachEducationHasRelatedIterator>
       <grid:foreachEducationHasAddressIterator>
-         <tr><td>hasAddress</td><td><a href="../<grid:EducationHasAddressType/>/<grid:EducationHasAddressType/>.jsp?uri=<grid:EducationHasAddress/>"><grid:EducationHasAddress /></a></td></tr>
+         <tr><td>hasAddress</td><td>
+            <c:set var="localType"><grid:EducationHasAddressType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:EducationHasAddress/>"><grid:EducationHasAddress/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:EducationHasAddressType/>/<grid:EducationHasAddressType/>.jsp?uri=<grid:EducationHasAddress/>"><grid:EducationHasAddress /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachEducationHasAddressIterator>
       <grid:foreachEducationHasChildIterator>
-         <tr><td>hasChild</td><td><a href="../<grid:EducationHasChildType/>/<grid:EducationHasChildType/>.jsp?uri=<grid:EducationHasChild/>"><grid:EducationHasChild /></a></td></tr>
+         <tr><td>hasChild</td><td>
+            <c:set var="localType"><grid:EducationHasChildType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:EducationHasChild/>"><grid:EducationHasChild/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:EducationHasChildType/>/<grid:EducationHasChildType/>.jsp?uri=<grid:EducationHasChild/>"><grid:EducationHasChild /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachEducationHasChildIterator>
       <grid:foreachEducationHasParentIterator>
-         <tr><td>hasParent</td><td><a href="../<grid:EducationHasParentType/>/<grid:EducationHasParentType/>.jsp?uri=<grid:EducationHasParent/>"><grid:EducationHasParent /></a></td></tr>
+         <tr><td>hasParent</td><td>
+            <c:set var="localType"><grid:EducationHasParentType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:EducationHasParent/>"><grid:EducationHasParent/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:EducationHasParentType/>/<grid:EducationHasParentType/>.jsp?uri=<grid:EducationHasParent/>"><grid:EducationHasParent /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachEducationHasParentIterator>
    </table>
 

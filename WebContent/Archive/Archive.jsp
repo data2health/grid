@@ -41,16 +41,56 @@
    <h3>Object Properties</h3>
    <table>
       <grid:foreachArchiveHasRelatedIterator>
-         <tr><td>hasRelated</td><td><a href="../<grid:ArchiveHasRelatedType/>/<grid:ArchiveHasRelatedType/>.jsp?uri=<grid:ArchiveHasRelated/>"><grid:ArchiveHasRelated /></a></td></tr>
+         <tr><td>hasRelated</td><td>
+            <c:set var="localType"><grid:ArchiveHasRelatedType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:ArchiveHasRelated/>"><grid:ArchiveHasRelated/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:ArchiveHasRelatedType/>/<grid:ArchiveHasRelatedType/>.jsp?uri=<grid:ArchiveHasRelated/>"><grid:ArchiveHasRelated /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachArchiveHasRelatedIterator>
       <grid:foreachArchiveHasAddressIterator>
-         <tr><td>hasAddress</td><td><a href="../<grid:ArchiveHasAddressType/>/<grid:ArchiveHasAddressType/>.jsp?uri=<grid:ArchiveHasAddress/>"><grid:ArchiveHasAddress /></a></td></tr>
+         <tr><td>hasAddress</td><td>
+            <c:set var="localType"><grid:ArchiveHasAddressType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:ArchiveHasAddress/>"><grid:ArchiveHasAddress/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:ArchiveHasAddressType/>/<grid:ArchiveHasAddressType/>.jsp?uri=<grid:ArchiveHasAddress/>"><grid:ArchiveHasAddress /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachArchiveHasAddressIterator>
       <grid:foreachArchiveHasChildIterator>
-         <tr><td>hasChild</td><td><a href="../<grid:ArchiveHasChildType/>/<grid:ArchiveHasChildType/>.jsp?uri=<grid:ArchiveHasChild/>"><grid:ArchiveHasChild /></a></td></tr>
+         <tr><td>hasChild</td><td>
+            <c:set var="localType"><grid:ArchiveHasChildType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:ArchiveHasChild/>"><grid:ArchiveHasChild/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:ArchiveHasChildType/>/<grid:ArchiveHasChildType/>.jsp?uri=<grid:ArchiveHasChild/>"><grid:ArchiveHasChild /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachArchiveHasChildIterator>
       <grid:foreachArchiveHasParentIterator>
-         <tr><td>hasParent</td><td><a href="../<grid:ArchiveHasParentType/>/<grid:ArchiveHasParentType/>.jsp?uri=<grid:ArchiveHasParent/>"><grid:ArchiveHasParent /></a></td></tr>
+         <tr><td>hasParent</td><td>
+            <c:set var="localType"><grid:ArchiveHasParentType/></c:set>
+            <c:choose>
+            <c:when test="${ localType eq 'null'}">
+                  <a href="<grid:ArchiveHasParent/>"><grid:ArchiveHasParent/></a>
+            </c:when>
+            <c:otherwise>
+                  <a href="../<grid:ArchiveHasParentType/>/<grid:ArchiveHasParentType/>.jsp?uri=<grid:ArchiveHasParent/>"><grid:ArchiveHasParent /></a>
+            </c:otherwise>
+            </c:choose>
+         </td></tr>
       </grid:foreachArchiveHasParentIterator>
    </table>
 
