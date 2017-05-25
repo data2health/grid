@@ -7,5 +7,6 @@
     <li><a href="/harvard/">Harvard Catalog</a>
     <li><a href="/stanford/">Stanford Catalog</a>
     <li><a href="/fast/">FAST</a>
+    <li><a href="/geonames/">GeoNames</a>
     <li><a href="/viaf/">VIAF</a>
 </ul>
